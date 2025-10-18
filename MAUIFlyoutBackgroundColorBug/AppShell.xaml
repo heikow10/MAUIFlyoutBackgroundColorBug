@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIFlyoutBackgroundColorBug.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUIFlyoutBackgroundColorBug"
+    Title="MAUIFlyoutBackgroundColorBug"
+    Shell.BackgroundColor="Green"
+    Shell.TitleColor="White"
+    FlyoutBackgroundColor="#00410D">
+    <Shell.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </Shell.Resources>
+    <Shell.FlyoutHeader>
+        <StackLayout BackgroundColor="#222222">
+            <Label Text="Title"
+                   Margin="10.0,50.0"
+                   TextColor="White" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+</Shell>
