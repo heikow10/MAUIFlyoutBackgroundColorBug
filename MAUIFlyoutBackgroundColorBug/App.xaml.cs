@@ -4,6 +4,11 @@
     {
         public App()
         {
+            if (Current != null)
+            {
+                Current.UserAppTheme = AppTheme.Dark;
+            }
+
             InitializeComponent();
         }
 
